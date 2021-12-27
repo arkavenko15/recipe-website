@@ -9,7 +9,7 @@
         <li routerLinkActive="active" *ngIf="isAuthenticated"><a routerLink="/recipes" >Recipes</a></li>
         <li routerLinkActive="active" *ngIf="!isAuthenticated"><a routerLink="/auth">Authenticate</a></li>
         <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
-        <li><a style="cursor: pointer; margin-left: 310px;" *ngIf="isAuthenticated">Logout</a></li>
+        <li><a style="cursor: pointer; margin-left: 310px;" *ngIf="isAuthenticated" (click)="onLogout()">Logout</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;" *ngIf="isAuthenticated">
         <li class="dropdown">
